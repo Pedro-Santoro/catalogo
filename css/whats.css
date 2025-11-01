@@ -1,0 +1,242 @@
+
+/*======================================================*/
+/*============== Estilos - Botão flutuante do WhatsApp =*/
+/*======================================================*/
+
+/* 1. Definição da Animação de Pulsação */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* 2. Estilo do Botão Principal (Link) */
+.whats-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+    /* Aplica a pulsação */
+    animation: pulse 2s infinite;
+}
+
+/* 3. Efeito Hover no Botão */
+.whats-button:hover {
+    transform: scale(1.1);
+    /* Pausa a pulsação para focar no efeito de escala */
+    animation-play-state: paused;
+}
+
+/* 4. Estilo do Balão de Dica (Tooltip) */
+.whats-tooltip {
+    /* MUDANÇA ESSENCIAL: POSICIONAMENTO RELATIVO AO PAI (.whats-button) */
+    position: absolute;
+    bottom: 100%;
+    /* Posiciona acima do botão */
+    right: 0;
+    /* Alinha o balão à direita do botão */
+    margin-bottom: 10px;
+    /* Adiciona um pequeno espaço entre o balão e o botão */
+
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+
+    /* Esconde por padrão e configura a transição */
+    opacity: 0;
+    visibility: hidden;
+    /* Garante que o balão não interfira no clique */
+    transform: translateY(10px);
+    /* Prepara o balão para o efeito "fade up" */
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Garante que o mouse 'ignore' o balão */
+}
+
+/* 5. Ação Principal: Mostrar o Balão Apenas no Hover (CSS Puro) */
+.whats-button:hover .whats-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    /* Desliza para a posição final */
+}
+/* 1. Estilo Básico do Contêiner (<figure>) */
+.figure-effect {
+    /* Define o contêiner com tamanho fixo (ajuste conforme seu layout) */
+    position: relative;
+    overflow: hidden; /* CRUCIAL: Esconde o que sai da borda, para o zoom funcionar */
+    margin: 0; /* Limpa margens padrão */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: Adiciona uma sombra */
+    /* Garante que o link ocupe todo o espaço */
+    display: block; 
+    border-radius: 15px ;
+}
+
+/* O link <a> dentro da figura também é importante */
+.figure-effect a {
+    display: block;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto padrão */
+}
+
+/* 2. Efeito de Zoom na Imagem */
+.figure-effect img {
+    /* A imagem deve ocupar 100% da largura inicial do pai */
+    width: 100%; 
+    height: auto;
+    display: block;
+    /* Transição suave para o zoom e outros efeitos */
+    transition: transform 0.5s ease-in-out; 
+}
+
+/* EFEITO 1: AÇÃO DO ZOOM */
+.figure-effect:hover img {
+    transform: scale(1.1); /* Zoom de 10% */
+}
+
+/* 3. Estilo da Legenda (<figcaption>) */
+.figure-effect figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Estilo de fundo e texto da legenda */
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    
+    /* Configuração inicial: escondida na parte de baixo */
+    transform: translateY(100%); 
+    opacity: 0;
+    
+    /* Transição suave para a aparição */
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+}
+
+/* EFEITO 2: MOSTRAR A LEGENDA */
+.figure-effect:hover figcaption {
+    transform: translateY(0); /* Move para cima, mostrando 100% */
+    opacity: 1; /* Torna totalmente visível */
+}
+
+    /* Animação de pulso para o botão do WhatsApp */
+    .whats-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .whats-button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Balãozinho do WhatsApp */
+    .whats-tooltip {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background-color: #25D366;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .whats-button:hover .whats-tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =================================================================
+   ESTILOS PERSONALIZADOS PARA A BARRA DE ROLAGEM (SCROLLBAR)
+   ================================================================= */
+
+/* 1. ESTILOS PARA WEBKIT (Chrome, Safari, Edge, Opera) */
+
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Define a cor de fundo da 'trilha' da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cinza claro */
+    border-radius: 5px;
+}
+
+/* Define a cor do 'polegar' (a barra que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Azul do Tailwind (blue-500) */
+    border-radius: 5px;
+}
+
+/* Efeito ao passar o mouse sobre o 'polegar' */
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Azul um pouco mais escuro (blue-600) */
+}
+
+
+/* 2. ESTILOS PARA FIREFOX (Aplica no body ou no elemento que tem o scroll) */
+
+/* Aplica os estilos no corpo da página. */
+body {
+    /* Define o 'polegar' (azul) e a 'trilha' (cinza claro) */
+    scrollbar-color: #3b82f6 #f1f1f1; 
+    /* Define a espessura da barra (thin = fina) */
+    scrollbar-width: thin;
+}
+
+/* ================================================================= */
