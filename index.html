@@ -4,12 +4,59 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo</title>
+    <title>Convênios Médicos – Planos que Cabem no Seu Bolsoz'</title>
     <link rel="shortcut icon" href="img/log/logo.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/whats.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Ajuste de tamanho da logo (w-32 h-32) */
+        .logo-size {
+            width: 8rem;
+            /* 128px */
+            height: 8rem;
+            /* 128px */
+        }
+
+        /* Efeitos de Transição e Hover para os Cards */
+        .card-catalog {
+            transition: all 0.3s ease;
+            /* Para o hover: transform e shadow */
+        }
+
+        .card-catalog:hover {
+            transform: translateY(-0.25rem) scale(1.02);
+            /* hover:-translate-y-1 hover:scale-105 */
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+            /* hover:shadow-lg */
+        }
+
+        /* Classe para replicar o efeito de sombra pulsante no Bootstrap */
+        .shadow-glow {
+            box-shadow: 0 0 20px #0d6efd, 0 0 40px #0d6efd, 0 0 60px #0d6efd;
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 5px #0d6efd;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #0d6efd, 0 0 40px #0d6efd;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #0d6efd;
+            }
+        }
+    </style>
+
     <meta property="og:title" content="Catálogo Oficial: Planos de Saúde - Pedro H Santoro" />
     <meta property="og:description"
         content="Veja agora os melhores planos de saúde Amil, SulAmérica e outros. Cotação rápida e contratação online!" />
@@ -19,208 +66,206 @@
     <meta property="og:site_name" content="Consultor - Pedro H Santoro" />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Plano de Saúde",
-  "name": "Catálogo de Planos de Saúde - Pedro H Santoro",
-  "description": "Veja os melhores planos de saúde Amil, SulAmérica e outros com preços exclusivos e contratação rápida. Faça sua cotação online!",
-  "provider": {
-    "@type": "Organization",
-    "name": "Consultor - Pedro H Santoro",
-    "url": "https://planosdesaudephs.com.br",
-    "logo": "https://planosdesaudephs.com.br/imagens/logo-da-corretora.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+5521985371561",
-      "contactType": "Sales"
-    }
-  },
-  "areaServed": {
-    "@type": "State",
-    "name": "Rio de Janeiro - RJ"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "250"
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "BRL",
-    "price": "150.00",
-    "priceSpecification": {
-      "@type": "UnitPriceSpecification",
-      "unitText": "Mês"
-    },
-    "url": "https://api.whatsapp.com/send?phone=+5521985371561"
-  }
-}
-</script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Plano de Saúde",
+            "name": "Catálogo de Planos de Saúde - Pedro H Santoro",
+            "description": "Veja os melhores planos de saúde Amil, SulAmérica e outros com preços exclusivos e contratação rápida. Faça sua cotação online!",
+            "provider": {
+                "@type": "Organization",
+                "name": "Consultor - Pedro H Santoro",
+                "url": "https://planosdesaudephs.com.br",
+                "logo": "https://planosdesaudephs.com.br/imagens/logo-da-corretora.png",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+5521985371561",
+                    "contactType": "Sales"
+                }
+            },
+            "areaServed": {
+                "@type": "State",
+                "name": "Rio de Janeiro - RJ"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "250"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "BRL",
+                "price": "150.00",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "unitText": "Mês"
+                },
+                "url": "https://api.whatsapp.com/send?phone=+5521985371561"
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
-
-    <!-- Cabeçalho -->
-    <header class="text-center py-8">
-        <img src="/img/log/logo.webp" alt="Logo da pagina" class="mx-auto mb-4 w-32 h-32 rounded-full
-            animate-pulse
-            shadow-[0_0_20px_#3b82f6,0_0_40px_#3b82f6,0_0_60px_#3b82f6]
-            transition-transform
-            duration-500">
-
-        <h1 class="text-3xl font-semibold tracking-tight">Catálogo de Produtos</h1>
-        <p class="text-gray-500 mt-2">Confira nossas opções abaixo</p>
-
-        <!-- Botão para o panfleto -->
-        <div class="mt-6">
-            <a href="https://pedro-santoro.github.io/planosmedicos/" target="_blank"
-                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition animate-pulse">
+<body class="bg-light text-dark">
+    <header class="text-center py-5"> <img src="img/log/logo.webp" alt="Logo da pagina"
+            class="mx-auto mb-4 rounded-circle logo-size shadow-glow border border-white border-3">
+        <h1 class="fs-3 fw-semibold">Catálogo de Produtos</h1>
+        <p class="text-secondary mt-2">Confira nossas opções abaixo</p>
+        <div class="mt-4"> <a href="https://pedro-santoro.github.io/planosmedicos/" target="_blank"
+                class="btn btn-primary btn-lg rounded-pill shadow-lg animate-pulse">
                 📄 Ver Panfleto Digital
             </a>
         </div>
     </header>
 
-    <!-- Vídeo de Apresentação -->
-<div style="max-width: 400px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/0cVv0kcXxRs?rel=0&autoplay=1&mute=1&controls=1&loop=1&playlist=0cVv0kcXxRs" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
-    </iframe>
-  </div>
-</div>
+    <div
+        style="max-width: 400px; margin: 20px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <iframe
+                src="https://www.youtube.com/embed/0cVv0kcXxRs?rel=0&autoplay=1&mute=1&controls=1&loop=1&playlist=0cVv0kcXxRs"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
+            </iframe>
+        </div>
+    </div>
 
-
-
-    <!-- Galeria -->
-    <section class="max-w-6xl mx-auto px-4 pb-12">
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-            <!-- Item do catálogo -->
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Nossa-sra-carmo.jpg" alt="Planos Amil com atendimento a Nossa sra do Carmo"
-                    class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento ao Hospital Nossa sra do Carmo</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o plano Bronze você tem acesso aos hospitais de referência
-                        de Campo Grande.</p>
+    <section class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Nossa-sra-carmo.jpg"
+                        alt="Planos Amil com atendimento a Nossa sra do Carmo" class="card-img-top object-cover"
+                        style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento ao Hospital Nossa sra do
+                            Carmo</h2>
+                        <p class="card-text text-secondary">Com o plano Bronze você tem acesso aos hospitais de
+                            referência de Campo Grande.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Mario-Leoni.jpg" alt="amil com atendimento no mario leoni"
-                    class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento no Mario Leoni.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Plano Bronze você tem acesso aos hospitais de referência
-                        de Duque de Caxias.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Mario-Leoni.jpg" alt="amil com atendimento no mario leoni"
+                        class="card-img-top object-cover" style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento no Mario Leoni.</h2>
+                        <p class="card-text text-secondary">Com o Plano Bronze você tem acesso aos hospitais de
+                            referência de Duque de Caxias.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-ProntoNil.jpg" alt="amil atendimento no prontonil"
-                    class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento no Prontonil.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Bronze Mais você tem acesso aos hospitais de referência
-                        de Nova Iguaçu.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-ProntoNil.jpg" alt="amil atendimento no prontonil"
+                        class="card-img-top object-cover" style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento no Prontonil.</h2>
+                        <p class="card-text text-secondary">Com o Bronze Mais você tem acesso aos hospitais de
+                            referência de Nova Iguaçu.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Centro-Pediatrico-da-Lagoa.jpg"
-                    alt="amil com atendimento ao centro pediatrico da lagoa" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento ao Centro Pediátrico da Lagoa.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Plano Prata você tem acesso aos hospitais de referência
-                        da zona sul.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Centro-Pediatrico-da-Lagoa.jpg"
+                        alt="amil com atendimento ao centro pediatrico da lagoa" class="card-img-top object-cover"
+                        style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento ao Centro Pediátrico da
+                            Lagoa.</h2>
+                        <p class="card-text text-secondary">Com o Plano Prata você tem acesso aos hospitais de
+                            referência da zona sul.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Hospital-Vitória.jpg" alt="amil com atendimento ao Hospital vitoria"
-                    class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento ao Hospital Vitória.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Plano Ouro você tem acesso aos hospitais de referência
-                        da zona oeste.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Hospital-Vitória.jpg" alt="amil com atendimento ao Hospital vitoria"
+                        class="card-img-top object-cover" style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento ao Hospital Vitória.</h2>
+                        <p class="card-text text-secondary">Com o Plano Ouro você tem acesso aos hospitais de referência
+                            da zona oeste.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Hospital-Pró-Cardiaco.jpg"
-                    alt="amil com atendimento ao hospital pro cardiaco" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento ao Hospital Pró Cardiaco.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Plano Ouro você tem acesso aos hospitais de referência
-                        da zona sul.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Hospital-Pró-Cardiaco.jpg"
+                        alt="amil com atendimento ao hospital pro cardiaco" class="card-img-top object-cover"
+                        style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento ao Hospital Pró Cardiaco.
+                        </h2>
+                        <p class="card-text text-secondary">Com o Plano Ouro você tem acesso aos hospitais de referência
+                            da zona sul.</p>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-                <img src="/img/catalogo/Amil-Samaritano-Barra.jpg"
-                    alt="amil com atendimento ao hospital samaritano barra" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="font-semibold text-lg">Planos Amil com atendimento ao Hospital samaritano Barra.</h2>
-                    <p class="text-sm text-gray-500 mt-1">Com o Plano Platinum RJR1 você tem acesso aos hospitais de
-                        referência da zona oeste.</p>
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm card-catalog">
+                    <img src="img/catalogo/Amil-Samaritano-Barra.jpg"
+                        alt="amil com atendimento ao hospital samaritano barra" class="card-img-top object-cover"
+                        style="height: 12rem;">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5 fw-semibold">Planos Amil com atendimento ao Hospital samaritano
+                            Barra.
+                        </h2>
+                        <p class="card-text text-secondary">Com o Plano Platinum RJR1 você tem acesso aos hospitais de
+                            referência da zona oeste.</p>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Seção de Redes Sociais -->
-    <section class="bg-white py-8 border-t border-gray-200">
-        <h4 class="text-center text-xl font-semibold text-gray-700 mb-4 underline">Minhas redes sociais</h4>
-        <div class="flex justify-center space-x-6 text-gray-600 text-2xl">
-            <a href="https://www.facebook.com/p.h.santoro" target="_blank" class="hover:text-blue-600 transition"
-                title="Facebook">
+    <section class="bg-white py-5 border-top border-secondary-subtle">
+        <h4 class="text-center fs-4 fw-semibold text-secondary mb-4 text-decoration-underline">Minhas redes sociais</h4>
+        <div class="d-flex justify-content-center gap-4 text-secondary fs-3">
+            <a href="https://www.facebook.com/p.h.santoro" target="_blank" class="text-primary-hover transition"
+                title="Facebook" style="color: inherit;">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://x.com/PEDROHSANT57940" target="_blank" class="hover:text-black transition"
-                title="X (Twitter)">
+            <a href="https://x.com/PEDROHSANT57940" target="_blank" class="text-dark-hover transition"
+                title="X (Twitter)" style="color: inherit;">
                 <i class="fab fa-x-twitter"></i>
             </a>
             <a href="https://www.youtube.com/watch?v=dpMmj2dMFWw&t=2s" target="_blank"
-                class="hover:text-red-600 transition" title="YouTube">
+                class="text-danger-hover transition" title="YouTube" style="color: inherit;">
                 <i class="fab fa-youtube"></i>
             </a>
             <a href="https://www.instagram.com/ssantoroo1000/?hl=pt-br" target="_blank"
-                class="hover:text-pink-500 transition" title="Instagram">
+                class="text-pink-hover transition" title="Instagram" style="color: inherit;">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-gray-100 text-center py-6 mt-8 border-t border-gray-300">
-        <p class="text-sm text-gray-700 font-medium">
-            Pedro Santoro — <span class="text-gray-500">Corretor de Planos de Saúde</span>
+    <footer class="bg-light text-center py-4 mt-4 border-top border-secondary-subtle">
+        <p class="text-sm text-secondary fw-medium">
+            Pedro Santoro — <span class="text-muted">Corretor de Planos de Saúde</span>
         </p>
-        <p class="text-sm text-gray-600 mt-1">
+        <p class="text-sm text-secondary mt-1">
             <b>Copyright © 2025 · Todos os direitos reservados · </b>
-            <a href="#" class="text-blue-600 hover:underline">
+            <a href="#" class="text-primary text-decoration-underline">
                 PEDRO SANTORO
             </a>
         </p>
         <div class="mt-2">
-            <a href="#top" class="text-blue-600 hover:underline text-sm">↑ Voltar ao topo</a>
+            <a href="#top" class="text-primary text-decoration-underline text-sm">↑ Voltar ao topo</a>
         </div>
     </footer>
 
-    <!-- Botão flutuante do WhatsApp -->
     <a href="https://wa.me/5521985371561?text=Quero%20saber%20mais%20sobre%20os%20planos%20de%20saude." target="_blank"
         class="whats-button" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="white">
@@ -231,37 +276,41 @@
     </a>
 
     <div id="promoAmilModal"
-        class="fixed inset-0 bg-black bg-opacity-70 z-[60] hidden flex items-center justify-center p-4">
+        class="position-fixed top-0 start-0 w-100 h-100 bg-black bg-opacity-75 z-3 d-none justify-content-center align-items-center p-4">
 
-        <div class="bg-white rounded-lg shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95"
-            id="promoAmilContent">
+        <div class="modal-dialog modal-sm" id="promoAmilContent">
+            <div class="modal-content">
 
-            <div class="flex justify-end p-2">
-                <button onclick="fecharPromoAmil()" class="text-gray-400 hover:text-gray-700 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-            </div>
+                <div class="d-flex justify-content-end p-2">
+                    <button onclick="fecharPromoAmil()" class="text-muted border-0 bg-transparent" aria-label="Close">
+                        <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
 
-            <div class="p-6 text-center">
-                <img src="img/catalogo/planos-amil.jpg" alt="Plano Amil em Destaque"
-                    class="w-full h-auto rounded-lg mb-4 shadow-md" />
+                <div class="p-4 text-center">
+                    <img src="img/catalogo/planos-amil.jpg" alt="Plano Amil em Destaque"
+                        class="img-fluid rounded-3 mb-4 shadow-sm" />
 
-                <h3 class="text-xl font-bold text-blue-600 mb-2">Plano Amil em Destaque!</h3>
-                <p class="text-sm text-gray-600 mb-4">Aproveite condições especiais por tempo limitado.</p> <a
-                    href="https://planosdesaudebrj.com.br" target="_blank"
-                    class="inline-block px-4 py-1.5 bg-blue-500 text-white text-sm font-semibold rounded-full hover:bg-blue-600 transition duration-300">
-                    Ver Detalhes Agora
-                </a>
-
+                    <h3 class="fs-4 fw-bold text-primary mb-2">Plano Amil em Destaque!</h3>
+                    <p class="fs-6 text-secondary mb-4">Aproveite condições especiais por tempo limitado.</p> <a
+                        href="https://planosdesaudebrj.com.br" target="_blank"
+                        class="btn btn-info text-white btn-sm rounded-pill hover-bg-info-dark transition duration-300">
+                        Ver Detalhes Agora
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
     <script src="js/zoom.js"></script>
 </body>
 
